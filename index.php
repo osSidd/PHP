@@ -12,7 +12,14 @@
         /*This ia a multi line 
         comment spread over
         multiple lines*/
-        echo "PHP is acronym for PHP Hypertext Preprocessor, created by Leadorf"
+        echo "PHP is acronym for PHP Hypertext Preprocessor, created by Leadorf";
+        $age = true;
+        print('<br/>');
+        echo var_dump([2,3,3]);
+        echo "<br/> Hi there I am $age years old $GLOBALS[age]";
+        echo "<br/>";
+        print "This is the age of the " . $age . " variable";
+
     ?>
 </body>
 </html>
