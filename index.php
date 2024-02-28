@@ -6,29 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>PHP tutorial</h1>
-    <?php
-        //This is a single line comment
-        /*This ia a multi line 
-        comment spread over
-        multiple lines*/
-        echo "PHP is acronym for PHP Hypertext Preprocessor, created by Leadorf";
-        $age = true;
-        print('<br/>');
-        echo var_dump([2,3,3]);
-        echo "<br/> Hi there I am $age years old $GLOBALS[age]";
-        echo "<br/>";
-        print "This is the age of the " . $age . " variable";
-        echo "<br/>";
-        echo 'This is the $age variable <br/>';
-        $len = strlen("Hello World");
-        $words = str_word_count("Hello World");
-        $word = strpos("Hello World", "World");
-        echo "String length - $len and word count - $words";
-        echo "String World is at position $word";
-        $arr = explode(" ", "Hello World");
-        print_r($arr);
-
-    ?>
+    <header>
+        <h1>Local library</h1>
+        <p>crud using php</p>
+    </header>
+    <main>
+        <h2>Add a book</h2>
+        <form action="">
+            <label for="">Title:</label>
+            <input type="text">
+            <label for="">Author:</label>
+            <input type="text">
+            <label for="">ISBN:</label>
+            <input type="text">
+            <label for="">Genre:</label>
+            <input type="text">
+            <label for="">Summary:</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button>Add book</button>
+        </form>
+    </main>
+    <footer>copyright &copy; <?php echo date('Y') ?></footer>
 </body>
 </html>
