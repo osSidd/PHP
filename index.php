@@ -27,5 +27,12 @@
         </form>
     </main>
     <footer>copyright &copy; <?php echo date('Y') ?></footer>
+    <?php $i = 0; 
+            while($i < 5):
+                echo $i;
+                $i++;
+            endwhile;
+            
+     ?>
 </body>
 </html>
