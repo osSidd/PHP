@@ -1,3 +1,5 @@
+<?php declare(strict_types=1); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +29,39 @@
         </form>
     </main>
     <footer>copyright &copy; <?php echo date('Y') ?></footer>
-    <?php $i = 0; 
-            while($i < 5):
-                echo $i;
-                $i++;
-            endwhile;
-            
+    <?php 
+
+        class Fruit{
+            public $color = 'red';
+            protected $name = 'green';
+            private $weight = 234;
+
+            function __construct($color){
+                $this->color = $color;
+            }
+
+            function get_color(){
+                return $this->color;
+            }
+
+            // function set_color($col){
+            //     $this->color = $col;
+            // }
+
+            function __destruct(){
+                echo "<br/> Color of fruit is $this->color and the script ends";
+            }
+        }
+
+        $apple = new Fruit('Orange');
+        // echo $apple->set_color('green');
+        echo $apple->get_color();
+        echo '<br/>';
+        echo var_dump($apple instanceof Fruit);
+
+        echo "$apple->color";
+        // echo "$apple->weight";
+        echo "$apple->name";
      ?>
 </body>
 </html>
