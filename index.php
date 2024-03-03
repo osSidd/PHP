@@ -31,10 +31,11 @@
     <footer>copyright &copy; <?php echo date('Y') ?></footer>
     <?php 
 
-        class Fruit{
+        final class Fruit{
             public $color = 'red';
             protected $name = 'green';
             private $weight = 234;
+            const PRICE = 22;
 
             function __construct($color){
                 $this->color = $color;
@@ -48,20 +49,25 @@
             //     $this->color = $col;
             // }
 
+            final function intro(){
+                return 'hi'. self::PRICE;
+            }
+
             function __destruct(){
                 echo "<br/> Color of fruit is $this->color and the script ends";
             }
         }
 
-        $apple = new Fruit('Orange');
-        // echo $apple->set_color('green');
-        echo $apple->get_color();
-        echo '<br/>';
-        echo var_dump($apple instanceof Fruit);
+        // class SummerFruit extends Fruit{
+        //     function intro(){
+        //         return 'hi tehre';
+        //     }
+        // }
 
-        echo "$apple->color";
-        // echo "$apple->weight";
-        echo "$apple->name";
+        $grape = new Fruit('red');
+        echo $grape->intro();
+        // echo $grape->name;
+        echo "<br/>". Fruit::PRICE;
      ?>
 </body>
 </html>
