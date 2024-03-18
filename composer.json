@@ -1,0 +1,15 @@
+{
+    "name": "osama/php-mvc-frmwrk",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Osama",
+            "email": "107386980+osSidd@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

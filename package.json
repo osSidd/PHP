@@ -1,7 +1,0 @@
-{
-    "name": "php_tuts",
-    "scripts": {
-        "start": "php -S localhost:3000"
-    }
-
-}
