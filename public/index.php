@@ -2,13 +2,13 @@
 
 include(__DIR__.'/../vendor/autoload.php');
 use app\core\Application;
-use app\controllers;
+use app\controllers\SiteController;
 
 $app = new Application(dirname(__DIR__));
 
-$app->router->get('/', 'home');
-$app->router->get('/contact', 'contact');
-$app->router->post('/contact', function(){return "Handling submitted data";});
+$app->router->get('/', [SiteController::class, 'home']);
+$app->router->get('/contact', [SiteController::class, 'getContact']);
+$app->router->post('/contact', [SiteController::class, 'postContact']);
 
 $app->run();
 

@@ -1,12 +1,25 @@
 <?php
     namespace app\controllers;
 
-    use app\Core\Application;
+    use app\core\Application;
+    use app\core\Controller;
 
-    class SiteController
+    class SiteController extends Controller
     {
-        public static function getContact()
+        public function home()
         {
-            return Application::app->Router->renderView('contact');
+            $params = ['name' => 'The Xmen'];
+            return $this->render('home', $params);
+        }
+
+
+        public function getContact()
+        {
+            return $this->render('contact');
+        }
+
+        public static function postContact()
+        {
+            return 'Post contact form';
         }
     }
